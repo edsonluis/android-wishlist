@@ -1,15 +1,21 @@
 package br.gov.serpro.edson.wishlist;
 
-import android.os.Bundle;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class ProductActivity extends Activity {
 
 	private ActionBar actionBar;
+	
+	private Button buttonSave;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,21 @@ public class ProductActivity extends Activity {
 		actionBar = getActionBar();
 		actionBar.setHomeButtonEnabled(true);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		
+		Bundle b = getIntent().getExtras();
+		if (b != null) {
+			Long id = b.getLong("item_id");
+			Toast.makeText(this, "A ID selecionada foi " + id, Toast.LENGTH_SHORT).show();
+		}
+		
+		buttonSave = (Button) findViewById(R.id.button_save);
+		buttonSave.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 
 	}
 
