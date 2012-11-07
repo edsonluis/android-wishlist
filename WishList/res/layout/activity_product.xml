@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView 
+        android:id="@+id/product_image"
+        android:layout_width="96dip"
+    	android:layout_height="96dip"
+        android:contentDescription="@null"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/crepusculo_livro" />
+    
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/product_image"
+        android:hint="@string/hint_product_name"
+        android:inputType="text" />
+    
+    <EditText
+        android:id="@+id/product_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/product_image"
+        android:layout_below="@+id/product_name"
+        android:hint="@string/hint_product_location"
+        android:inputType="text" />
+    
+    <Spinner 
+        android:id="@+id/product_category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:entries="@array/product_category"
+        android:layout_below="@+id/product_location" />
+    
+    <EditText
+        android:id="@+id/product_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_category"
+        android:layout_toLeftOf="@+id/button_search"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/hint_product_contact"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/button_search"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:minWidth="100dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/product_category"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/button_search" />
+    
+    <EditText
+        android:id="@+id/product_min_price"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_contact"
+        android:layout_toLeftOf="@+id/button_buscape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_product_min_price"
+        android:inputType="text" />
+    
+    <EditText
+        android:id="@+id/product_max_price"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_min_price"
+        android:layout_toLeftOf="@+id/button_buscape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_product_max_price"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/button_buscape"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:minWidth="100dip"
+        android:minHeight="90dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button_search"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/button_buscape" />
+    
+    <CheckBox 
+        android:id="@+id/product_notification"
+        android:layout_below="@+id/product_max_price"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:checked="true"
+        android:text="@string/checkbox_product_notification" />
+    
+    <Button 
+        android:id="@+id/button_save"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:minWidth="150dip"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_marginBottom="10dp"
+        android:text="@string/button_save"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

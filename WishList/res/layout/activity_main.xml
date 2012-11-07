@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="8dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/textview_books" />
+    
+    <TextView 
+        android:id="@+id/textView_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/textView_books"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/black" />
+
+    <ListView
+        android:id="@+id/listView_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView_divider"
+        android:dividerHeight="1dip"
+        android:divider="@android:color/darker_gray"
+        android:layout_above="@+id/button_new" />
+
+    <Button
+        android:id="@+id/button_new"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:minWidth="150dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/button_new" />
+    
+</RelativeLayout>

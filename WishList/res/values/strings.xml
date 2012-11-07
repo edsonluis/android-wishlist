@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">WishList</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="button_ok">OK</string>
+    <string name="button_search">Pesquisar</string>
+    <string name="button_buscape">Buscapé</string>
+    <string name="button_save">Salvar</string>
+    <string name="button_new">Novo</string>
+    <string name="hint_product_name">Nome do Produto</string>
+    <string name="hint_product_location">Local</string>
+    <string name="hint_product_contact">Contato</string>
+    <string name="hint_product_min_price">Preço Mínimo</string>
+    <string name="hint_product_max_price">Preço Máximo</string>
+    <string name="checkbox_product_notification">Notificar Preço</string>
+    <string name="textview_books">Livros</string>
+    <string name="textview_author">Autor</string>
+    <string name="textview_publishing">Editora</string>
+    
+    <string-array name="product_category">
+        <item>Categoria 1</item>
+        <item>Categoria 2</item>
+        <item>Categoria 3</item>
+    </string-array>
+</resources>
