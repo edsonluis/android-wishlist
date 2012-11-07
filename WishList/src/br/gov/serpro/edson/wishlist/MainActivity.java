@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 	private ListView listBooks;
 
 	private ActionBar actionBar;
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
 				startActivityForResult(intent, 1);
 			}
 		});
-		
+
 		cursor.close();
 
 		registerForContextMenu(listBooks);
@@ -107,7 +107,7 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	
+
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
 		menu.add("Compartilhar");
 		menu.add("Excluir");
 	}
-	
+
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		return true;

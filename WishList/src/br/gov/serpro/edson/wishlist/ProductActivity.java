@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class ProductActivity extends Activity {
 
 	private ActionBar actionBar;
-	
+
 	private Button buttonSave;
 
 	@Override
@@ -25,16 +25,17 @@ public class ProductActivity extends Activity {
 		actionBar = getActionBar();
 		actionBar.setHomeButtonEnabled(true);
 		actionBar.setDisplayHomeAsUpEnabled(true);
-		
+
 		Bundle b = getIntent().getExtras();
 		if (b != null) {
 			Long id = b.getLong("item_id");
-			Toast.makeText(this, "A ID selecionada foi " + id, Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "A ID selecionada foi " + id,
+					Toast.LENGTH_SHORT).show();
 		}
-		
+
 		buttonSave = (Button) findViewById(R.id.button_save);
 		buttonSave.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				finish();
@@ -53,15 +54,15 @@ public class ProductActivity extends Activity {
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		Intent intent = null;
 		switch (item.getItemId()) {
-			case android.R.id.home:
-				intent = new Intent(ProductActivity.this, MainActivity.class);
-				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-				finish();
-				break;
-	
-			default:
-				break;
+		case android.R.id.home:
+			intent = new Intent(ProductActivity.this, MainActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			finish();
+			break;
+
+		default:
+			break;
 		}
 
 		return true;
