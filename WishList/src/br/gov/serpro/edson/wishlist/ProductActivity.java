@@ -61,6 +61,10 @@ public class ProductActivity extends Activity {
 			finish();
 			break;
 
+		case R.id.menu_settings: 
+			intent = new Intent(ProductActivity.this, PrefActivity.class);
+			startActivity(intent);
+			break;
 		default:
 			break;
 		}

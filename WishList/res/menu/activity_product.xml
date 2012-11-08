@@ -3,4 +3,9 @@
         android:title="@string/button_save" 
         android:icon="@drawable/ic_action_done"
         android:showAsAction="always" />
+    
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom" />
 </menu>

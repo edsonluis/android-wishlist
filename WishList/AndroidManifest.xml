@@ -7,10 +7,13 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="15" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="WishListApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" android:name="WishListApplication">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -24,6 +27,13 @@
             android:name=".ProductActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".PrefActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service android:name=".ServicoIntent" >
+        </service>
     </application>
 
 </manifest>
